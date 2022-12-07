@@ -7,12 +7,14 @@ import Auth from '../Header/Auth';
 
 export const Header = () => {
   return (
-    <header>
+    <header className={style.header}>
       <Layout>
-        <Logo />
-        <Heading/>
-        <Search/>
-        <Auth/>
+        <div className={style.gridContainer}>
+          <Logo />
+          <Heading text='Главная'/>
+          <Search/>
+          <Auth auth={false}/>
+        </div>
       </Layout>
     </header>
   ) 
